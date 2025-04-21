@@ -13,5 +13,8 @@ export default defineConfig({
     platformProxy: {
       enabled: true,
     },
+  vite: {
+    envPrefix: 'STRAVA_', // zodat import.meta.env.STRAVA_ werkt
+  },
   }),
 });
