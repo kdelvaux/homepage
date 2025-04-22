@@ -1,12 +1,31 @@
 ---
-import Head from '../components/Head.astro';
-import Nav from '../components/Nav.astro';
-const {
-  title = 'Karel's webcard',
-  description = 'An online football magazine',
-} = Astro.props;
 
-import Footer from '../components/Footer.astro';
+  import '../styles/main.css';
+  import '../styles/animations.css';
+  import '../styles/bootstrap.min.css';
+  import '../styles/owl.carousel.css';
+  import '../styles/magnific-popup.css';
+  import '../styles/normalize.css';
+  import '../styles/perfect-scrollbar.css';
+  
+  import { SITE_TITLE } from '../consts';
+  import { SITE_DESCRIPTION } from '../consts';
+  import { SITE_URL } from '../consts';
+  import { SITE_AUTHOR } from '../consts';
+  
+  
+  import Head from '../components/Head.astro';
+  import Nav from '../components/Nav.astro';
+  const {
+    title = 'Karel\'s webcard',
+    description = 'An online football magazine',
+  } = Astro.props;
+  
+  
+  
+  import Footer from '../components/Footer.astro';
+
+  const today = new Date();
 ---
 
 <!DOCTYPE html>
@@ -14,20 +33,20 @@ import Footer from '../components/Footer.astro';
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>{title}</title>
+    <title>{SITE_TITLE} - {PAGE_TITLE}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="{description}" />
+    <meta name="description" content="{SITE_DESCRIPTION}" />
     <meta name="keywords" content="{SITE_KEYWORDS}" />
     <meta name="author" content="{SITE_AUTHOR}" />
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
-    <link rel="stylesheet" href="../styles/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="../styles/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="../styles/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="../styles/main.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="src/styles/main.css" type="text/css">
 
-    <script src="../js/modernizr.custom.js"></script>
+    <script src="src/utils/modernizr.custom.js"></script>
   </head>
 
   <body class="page">
@@ -574,7 +593,7 @@ import Footer from '../components/Footer.astro';
           </div>
               
           <div class="footer-copyrights">
-            <p>© 2020 All rights reserved. LMPixels.</p>
+            <p>&copy; {today.getFullYear()} Karel Delvaux. All rights reserved.</p>
           </div>
         </footer>
         <!-- /Footer -->
@@ -582,17 +601,14 @@ import Footer from '../components/Footer.astro';
       </div>
     </div>
 
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src='js/jquery.shuffle.min.js'></script>
-    <script src='js/masonry.pkgd.min.js'></script>
-    <script src='js/owl.carousel.min.js'></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrDf32aQTCVENBhFJbMBKOUTiUAABtC2o"></script>
-    <script src="js/jquery.googlemap.js"></script>
-    <script src="js/validator.js"></script>
-    <script src="js/main.js"></script>
+    <script src="src/utils/jquery-3.5.1.min.js"></script>
+    <script src="src/utils/imagesloaded.pkgd.min.js"></script>
+    <script src="src/utils/bootstrap.min.js"></script>
+    <script src='src/utils/jquery.shuffle.min.js'></script>
+    <script src='src/utils/masonry.pkgd.min.js'></script>
+    <script src='src/utils/owl.carousel.min.js'></script>
+    <script src="src/utils/jquery.magnific-popup.min.js"></script>
+    <script src="src/utils/validator.js"></script>
+    <script src="src/utils/main.js"></script>
   </body>
 </html>
