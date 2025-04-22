@@ -1,22 +1,33 @@
+---
+import Head from '../components/Head.astro';
+import Nav from '../components/Nav.astro';
+const {
+  title = 'Karel's webcard',
+  description = 'An online football magazine',
+} = Astro.props;
+
+import Footer from '../components/Footer.astro';
+---
+
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <title>Leven - Resume / CV / vCard Template</title>
+    <title>{title}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Leven - Resume / CV / vCard Template" />
-    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, portfolio" />
-    <meta name="author" content="lmpixels" />
+    <meta name="description" content="{description}" />
+    <meta name="keywords" content="{SITE_KEYWORDS}" />
+    <meta name="author" content="{SITE_AUTHOR}" />
     <link rel="shortcut icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="../styles/normalize.css" type="text/css">
+    <link rel="stylesheet" href="../styles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../styles/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="../styles/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../styles/main.css" type="text/css">
 
-    <script src="js/modernizr.custom.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
   </head>
 
   <body class="page">
