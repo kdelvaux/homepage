@@ -12,14 +12,3 @@
   },
   "upload_source_maps": true
 }
-{
-  "name": "strava-worker",
-  "type": "javascript",
-  "account_id": "je_account_id",
-  "workers_dev": true,
-  "compatibility_date": "2024-04-21",
-  "vars": {
-    "STRAVA_ACCESS_TOKEN": "je_token_hier",
-    "STRAVA_ATHLETE_ID": "12345678"
-  }
-}
