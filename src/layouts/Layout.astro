@@ -25,7 +25,6 @@
   
   import Footer from '../components/Footer.astro';
 
-  const today = new Date();
 ---
 
 <!DOCTYPE html>
@@ -577,28 +576,7 @@
         </div>
 
         <!-- Footer -->
-        <footer class="site-footer clearfix">
-          <div class="footer-social">
-            <ul class="footer-social-links">
-              <li>
-                <a href="#" target="_blank">Twitter</a>
-              </li>
-
-              <li>
-                <a href="#" target="_blank">Facebook</a>
-              </li>
-
-              <li>
-                <a href="#" target="_blank">Instagram</a>
-              </li>
-            </ul>
-          </div>
-              
-          <div class="footer-copyrights">
-            <p>&copy; {today.getFullYear()} Karel Delvaux. All rights reserved.</p>
-          </div>
-        </footer>
-        <!-- /Footer -->
+        <Footer />
         
       </div>
     </div>
