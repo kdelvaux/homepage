@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "delvaux.one";
 export const SITE_URL = "https://www.kareldelvaux.be/";
-export const SITE_DESCRIPTION = "Welcome!";
+export const SITE_DESCRIPTION = "Personal webpage of Karel Delvaux, automotive engineer.";
 export const SITE_AUTHOR = "Karel Delvaux";
 export const SITE_KEYWORDS = "";
 
